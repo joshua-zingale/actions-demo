@@ -1,0 +1,18 @@
+on:
+    pull_request:
+        branches:
+            - master
+    push:
+        branches:
+            - master
+
+jobs:
+    tests-passing:
+        runs-on: ubuntu-latest
+        steps:
+            - name: Cloning Repo
+              uses: actions/checkout@v5
+            - name: Compiling Source
+              run: cmake . && cmake --build .
+            - name: Running Tests
+              run: ./bin/test
