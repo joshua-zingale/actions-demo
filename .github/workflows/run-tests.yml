@@ -12,6 +12,15 @@ jobs:
         steps:
             - name: Cloning Repo
               uses: actions/checkout@v5
+            - name: Install CMake If Missing
+              shell: bash
+              run: |
+                if ! command -v cmake &> /dev/null; then
+                  echo "CMake not found. Installing..."
+                  sudo apt-get update -y && sudo apt-get install -y cmake
+                else
+                  echo "CMake is already installed at $(command -v cmake)"
+                fi
             - name: Compiling Source
               run: cmake . && cmake --build .
             - name: Running Tests
