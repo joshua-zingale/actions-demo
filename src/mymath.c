@@ -3,7 +3,7 @@
 
 double polynomial_eval(DoubleArray array, double x) {
     double res = 0;
-    for (int i = array.length - 1; i >= 0; i--) {
+    for (int i = array.length - 2; i >= 0; i--) {
         res = res * x + array.numbers[i];
     }
     return res;
