@@ -1,3 +1,6 @@
+
+[![.github/workflows/run-tests.yml](https://github.com/joshua-zingale/actions-demo/actions/workflows/run-tests.yml/badge.svg)](https://github.com/joshua-zingale/actions-demo/actions/workflows/run-tests.yml)
+
 This repository is a demonstration repository, designed to showcase CI/CD and through GitHub Actions.
 
 
